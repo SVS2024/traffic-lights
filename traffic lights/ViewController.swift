@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet var green: UIView!
     @IBOutlet var red: UIView!
     @IBOutlet var button: UIButton!
+    var color: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,44 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func topButton() {
+               
+                switch color {
+                case 0:
+                    red.alpha = 1
+                    yellow.alpha = 0.3
+                    green.alpha = 0.3
+                    color += 1
+                    if color >= 3 {
+                        color = 0
+                    }
+                case 1:
+                    red.alpha = 0.3
+                    yellow.alpha = 1
+                    green.alpha = 0.3
+                    color += 1
+                    if color >= 3 {
+                        color = 0
+                    }
+                case 2:
+                    red.alpha = 0.3
+                    yellow.alpha = 0.3
+                    green.alpha = 1
+                    color += 1
+                    if color >= 3 {
+                        color = 0
+                    }
+                default:
+                    color = 0
+                }
+                    
+                }
+            }
+       
+//    func collorSwitch (_ red: Int, _yellow: Int , _green: Int) {
+//       red.alpha = red
+//       yellow.alpha = yellow
+//       green.alpha = green
+//       }
 
-}
 

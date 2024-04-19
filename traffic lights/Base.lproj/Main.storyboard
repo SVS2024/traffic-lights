@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,52 +13,51 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="traffic_lights" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="c3G-ZU-t6E">
-                                <rect key="frame" x="121" y="83" width="150" height="530"/>
+                            <stackView opaque="NO" contentMode="center" semanticContentAttribute="playback" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="c3G-ZU-t6E">
+                                <rect key="frame" x="132" y="45" width="150" height="470"/>
                                 <subviews>
-                                    <view tag="9" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N2s-Ds-eKC">
+                                    <view tag="9" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L4X-DT-euC">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                    </view>
+                                    <view tag="9" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N2s-Ds-eKC">
+                                        <rect key="frame" x="0.0" y="160" width="150" height="150"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                     </view>
                                     <view tag="5" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="qaj-Fc-wht">
-                                        <rect key="frame" x="0.0" y="190" width="150" height="150"/>
+                                        <rect key="frame" x="0.0" y="320" width="150" height="150"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                    </view>
-                                    <view tag="9" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="L4X-DT-euC">
-                                        <rect key="frame" x="0.0" y="380" width="150" height="150"/>
-                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="qaj-Fc-wht" firstAttribute="centerY" secondItem="c3G-ZU-t6E" secondAttribute="centerY" id="1ts-gs-4sx"/>
-                                    <constraint firstItem="qaj-Fc-wht" firstAttribute="top" secondItem="c3G-ZU-t6E" secondAttribute="top" constant="190" id="Wn2-5p-FNc"/>
+                                    <constraint firstAttribute="height" constant="470" id="4LW-A4-xak"/>
+                                    <constraint firstAttribute="width" constant="150" id="ZJd-Fp-ChU"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gt-he-xTp">
-                                <rect key="frame" x="121" y="712.66666666666663" width="151" height="50.333333333333371"/>
+                                <rect key="frame" x="132" y="630.66666666666663" width="150" height="50.333333333333371"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="t54-H8-wiw"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="fki-Lc-dBW"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Start" buttonSize="large"/>
+                                <connections>
+                                    <action selector="topButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="KPy-Lm-pPS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="c3G-ZU-t6E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="5vW-Wv-Dlb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="c3G-ZU-t6E" secondAttribute="bottom" constant="205" id="8XQ-4M-2qW"/>
-                            <constraint firstItem="1gt-he-xTp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AJK-eh-XoT"/>
-                            <constraint firstItem="c3G-ZU-t6E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="KQh-uD-UT1"/>
-                            <constraint firstItem="1gt-he-xTp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="X49-B0-5Sp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c3G-ZU-t6E" secondAttribute="trailing" constant="122" id="Z24-Ey-NLc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1gt-he-xTp" secondAttribute="bottom" constant="55" id="c50-6a-Bjc"/>
-                            <constraint firstItem="1gt-he-xTp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dzn-ZB-c4n"/>
+                            <constraint firstItem="1gt-he-xTp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xsg-ZU-7nO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1gt-he-xTp" secondAttribute="bottom" constant="55" id="e1I-S1-8nD"/>
+                            <constraint firstItem="c3G-ZU-t6E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="nHm-dK-ukc"/>
+                            <constraint firstItem="c3G-ZU-t6E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pen-xK-lkt"/>
                         </constraints>
                     </view>
                     <connections>
